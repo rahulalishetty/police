@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+	<style>
+.mySlides {display:none;}
+</style>
+</head>
+<body>
+
+<div class="w3-container ">
+<div class="w3-bar w3-border w3-light-grey" style="margin: 0px 0px 0px 100px">
+  <a href="#" class="w3-bar-item w3-button w3-green">Home</a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    <input type="text" class="w3-bar-item w3-input w3-white w3-mobile" placeholder="Search..">
+    <button class="w3-bar-item w3-button w3-green w3-mobile">Go</button>
+</div>
+</div>
+<img src="pics/logo.png" style="width: 70px ;height:70px;">
+<div  style="max-width:500px ;max-height:300px; margin: 20px 50px 10px 200px;">
+  <img class="mySlides" src="pics/F1.jpg" style="width:100%; ">
+  <img class="mySlides" src="pics/games.jpg" style="width:100%"><!-- IMAGES FOR SLIDE SHOW-->
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
